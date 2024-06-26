@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机英语词表</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: white;
+        }
+        .hidden {
+            color: white;
+        }
+        .button-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .button-container button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vocabulary App</h1>
+    <table id="vocabularyTable">
+        <thead>
+            <tr>
+                <th>缩写</th>
+                <th>全称</th>
+                <th>中文</th>
+                <th>介绍</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="button-container">
+        <button onclick="toggleColumn('缩写')">遮挡 缩写</button>
+        <button onclick="toggleColumn('全称')">遮挡 全称</button>
+        <button onclick="toggleColumn('中文')">遮挡 中文</button>
+        <button onclick="toggleColumn('介绍')">遮挡 介绍</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
